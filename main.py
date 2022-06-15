@@ -35,6 +35,7 @@ def analysis(dict1):
             if len(result[f'({dict1[key1]}, {key1})']) == 0:
                 del result[f'({dict1[key1]}, {key1})']
             else:
+                result[f'({dict1[key1]}, {key1})'].append(key1)
                 yield f'({dict1[key1]}, {os.path.basename(key1)})', result[f'({dict1[key1]}, {key1})']
 
 
